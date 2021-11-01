@@ -4,12 +4,21 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #252525;
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem 0;
+  border: #000 solid 0.1rem;
+  border-radius: 1rem;
 }
 
 .footer {
@@ -40,20 +49,24 @@
 }
 
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  font-size: 1.8rem;
 }
 
 .title,
-.description {
+.content {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  background-color: #e3e1e1;
+  margin-top: 0.4rem;
+  padding: 0.35rem;
+  border: #000 solid 0.1rem;
+  border-radius: 10px;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.content {
+  font-size: 1.2rem;
 }
 
 .code {
@@ -67,29 +80,30 @@
 
 .grid {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .card {
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
-  color: inherit;
+  background-color: #252525;
   text-decoration: none;
-  border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  transition: all 0.5s ease;
+  max-width: 500px;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  background-color: #4d4d4d;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .card h2 {
@@ -106,6 +120,10 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.rounded {
+  border-radius: 1rem;
 }
 
 @media (max-width: 600px) {

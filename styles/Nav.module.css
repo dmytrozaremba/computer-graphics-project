@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: fit-content;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #252525;
+  padding-right: 2rem;
+  padding-top: 4rem;
+}
+
+.home {
+  margin-bottom: auto;
+}
+
+.nav a {
+  font-size: 1.5rem;
+}
+
+.item,
+.home {
+  background-color: #e3e1e1;
+  color: #000;
+  margin: 1rem 0;
+  min-width: 180px;
+  text-align: center;
+  padding: 0.2rem 0.1rem;
+}
