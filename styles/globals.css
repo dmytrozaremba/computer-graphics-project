@@ -29,12 +29,16 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .canvas-box {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  width: 90%;
+  min-height: 70vh;
+  height: 100%;
   padding: 1rem;
 }
 
@@ -49,10 +53,30 @@ ul {
   padding: 1rem 2rem;
 }
 
+.parameters-box-colors {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 5rem 0 5rem;
+}
+
 .field {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.color-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.range-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .field input {
@@ -71,4 +95,8 @@ canvas {
 
 canvas.t {
   background-color: black;
+}
+
+.saturation-range {
+  width: 90%;
 }

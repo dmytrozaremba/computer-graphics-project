@@ -126,6 +126,13 @@
   border-radius: 1rem;
 }
 
+@media (max-width: 1660px) {
+  .grid {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

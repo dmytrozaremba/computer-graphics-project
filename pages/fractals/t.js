@@ -10,8 +10,8 @@ const fractal = () => {
   const [iteration, setIteration] = useState(1);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-  const [lineColor, setLineColor] = useState('#000');
-  const [backgroundColor, setBackgroundColor] = useState('#fff');
+  const [lineColor, setLineColor] = useState('#fff');
+  const [backgroundColor, setBackgroundColor] = useState('#000');
 
   const onIterationChange = (e) => {
     if (e.target.value > maxIteration) return setIteration(maxIteration);
@@ -65,7 +65,7 @@ const fractal = () => {
               <h4>Колір фону:</h4>
               <input
                 type="color"
-                value={lineColor}
+                value={backgroundColor}
                 onChange={(e) => setBackgroundColor(e.target.value)}
               />
             </div>
