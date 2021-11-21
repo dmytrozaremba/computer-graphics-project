@@ -100,3 +100,24 @@ canvas.t {
 .saturation-range {
   width: 90%;
 }
+
+.btn {
+  background-color: #e3e1e1;
+  color: #000;
+  margin: 1rem 0;
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  border: #000 solid 1px;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  transition: ease 0.2s;
+}
+
+.btn:hover {
+  background-color: #d3d1d1;
+  cursor: pointer;
+}
+
+#files {
+  display: none;
+}

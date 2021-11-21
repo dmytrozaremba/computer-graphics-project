@@ -53,22 +53,24 @@ const CanvasColors = (props) => {
     const baseImage = new Image();
     baseImage.src = props.imgUrl;
 
-    const { width, height } = baseImage;
-    if (width > maxWidth) {
-      const ratio = maxWidth / width;
-      canvas.width = width * ratio;
-      canvas.height = height * ratio;
-    } else {
-      canvas.width = width;
-      canvas.height = height;
-    }
+    baseImage.onload = function () {
+      const { width, height } = baseImage;
+      if (width > maxWidth) {
+        const ratio = maxWidth / width;
+        canvas.width = width * ratio;
+        canvas.height = height * ratio;
+      } else {
+        canvas.width = width;
+        canvas.height = height;
+      }
 
-    context.drawImage(baseImage, 0, 0);
-    context.globalCompositeOperation = 'saturation';
-    context.fillStyle = `hsl(0,${props.saturation}%,50%)`;
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    context.globalCompositeOperation = 'source-over';
-  }, [props.saturation]);
+      context.drawImage(baseImage, 0, 0);
+      context.globalCompositeOperation = 'saturation';
+      context.fillStyle = `hsl(120,${props.saturation}%,50%)`;
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.globalCompositeOperation = 'source-over';
+    };
+  }, [props.saturation, props.imgUrl]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -102,31 +104,6 @@ const CanvasColors = (props) => {
       );
     }
   }, [pos]);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
-
-    const maxWidth = 680;
-
-    console.log(props.imgUrl);
-
-    const baseImage = new Image();
-    baseImage.src = props.imgUrl;
-
-    const { width, height } = baseImage;
-    if (width > maxWidth) {
-      const ratio = maxWidth / width;
-      canvas.width = width * ratio;
-      canvas.height = height * ratio;
-    } else {
-      canvas.width = width;
-      canvas.height = height;
-    }
-    baseImage.onload = function () {
-      context.drawImage(baseImage, 0, 0);
-    };
-  }, []);
 
   return (
     <div>

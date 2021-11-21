@@ -6,6 +6,16 @@ import { useState } from 'react';
 const color = () => {
   const [saturation, setSaturation] = useState(50);
   const [imgUrl, setImgUrl] = useState('/Squidward-Normal.png');
+
+  const updateImgUrl = (e) => {
+    if (e.target.files && e.target.files.length > 0) {
+      const reader = new FileReader();
+      reader.addEventListener('load', () => setImgUrl(reader.result));
+      reader.readAsDataURL(e.target.files[0]);
+      setSaturation(50);
+    }
+  };
+
   return (
     <div>
       <Head>
@@ -30,6 +40,17 @@ const color = () => {
                 onChange={(e) => setSaturation(e.target.value)}
                 className="saturation-range"
               />
+            </div>
+            <div className="button-box">
+              <label htmlFor="files" className="btn">
+                Обрати зображення
+                <input
+                  id="files"
+                  type="file"
+                  accept="image/*"
+                  onChange={updateImgUrl}
+                />
+              </label>
             </div>
           </div>
         </div>
