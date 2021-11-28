@@ -11,17 +11,17 @@ const Nav = () => {
       </div>
       <div style={{ marginBottom: '12rem' }}>
         <div className={navStyles.item}>
-          <Link href="/fractals/h">
+          <Link href="/fractals/h/info">
             <a>Фрактали</a>
           </Link>
         </div>
         <div className={navStyles.item}>
-          <Link href="/color">
+          <Link href="/color/info">
             <a>Кольори</a>
           </Link>
         </div>
         <div className={navStyles.item}>
-          <Link href="/affine">
+          <Link href="/affine/info">
             <a>Перетворення</a>
           </Link>
         </div>

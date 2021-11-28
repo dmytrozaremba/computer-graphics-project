@@ -1,17 +1,18 @@
-import Nav from '../../components/Nav';
+import Nav from '../../../components/Nav';
 import Head from 'next/head';
-import Canvas from '../../components/canvases/CanvasH';
+import Link from 'next/link';
+import Canvas from '../../../components/canvases/CanvasT';
 import { useState } from 'react';
 
 const fractal = () => {
   const maxIteration = 8;
   const minIteration = 1;
 
-  const [iteration, setIteration] = useState(5);
+  const [iteration, setIteration] = useState(1);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-  const [lineStyle, setLineStyle] = useState('solid');
-  const [lineColor, setLineColor] = useState('#123');
+  const [lineColor, setLineColor] = useState('#fff');
+  const [backgroundColor, setBackgroundColor] = useState('#000');
 
   const onIterationChange = (e) => {
     if (e.target.value > maxIteration) return setIteration(maxIteration);
@@ -33,7 +34,7 @@ const fractal = () => {
               iteration={iteration}
               x={x}
               y={y}
-              lineStyle={lineStyle}
+              backgroundColor={backgroundColor}
               lineColor={lineColor}
             />
           </div>
@@ -62,11 +63,11 @@ const fractal = () => {
               />
             </div>
             <div className="field">
-              <h4>Стиль ліній:</h4>
+              <h4>Колір фону:</h4>
               <input
-                type="text"
-                value={lineStyle}
-                onChange={(e) => setLineStyle(e.target.value)}
+                type="color"
+                value={backgroundColor}
+                onChange={(e) => setBackgroundColor(e.target.value)}
               />
             </div>
             <div className="field">
@@ -76,6 +77,22 @@ const fractal = () => {
                 value={lineColor}
                 onChange={(e) => setLineColor(e.target.value)}
               />
+            </div>
+            <div
+              className="buttons-container"
+              style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}
+            >
+              <Link href="/fractals/h">
+                <button
+                  className="btn"
+                  style={{ padding: '.4rem', margin: '0 3rem 0 0' }}
+                >
+                  Н-фрактали
+                </button>
+              </Link>
+              <Link href="/fractals/t/info">
+                <button className="btn btn-info">Довідка</button>
+              </Link>
             </div>
           </div>
         </div>

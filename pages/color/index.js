@@ -1,6 +1,7 @@
-import Nav from '../components/Nav';
+import Nav from '../../components/Nav';
 import Head from 'next/head';
-import Canvas from '../components/canvases/CanvasColors';
+import Link from 'next/link';
+import Canvas from '../../components/canvases/CanvasColors';
 import { useState } from 'react';
 
 const color = () => {
@@ -41,16 +42,21 @@ const color = () => {
                 className="saturation-range"
               />
             </div>
-            <div className="button-box">
-              <label htmlFor="files" className="btn">
-                Обрати зображення
-                <input
-                  id="files"
-                  type="file"
-                  accept="image/*"
-                  onChange={updateImgUrl}
-                />
-              </label>
+            <div className="buttons-container">
+              <div className="button-box">
+                <label htmlFor="files" className="btn">
+                  Обрати зображення
+                  <input
+                    id="files"
+                    type="file"
+                    accept="image/*"
+                    onChange={updateImgUrl}
+                  />
+                </label>
+              </div>
+              <Link href="/color/info">
+                <button className="btn btn-info">Довідка</button>
+              </Link>
             </div>
           </div>
         </div>

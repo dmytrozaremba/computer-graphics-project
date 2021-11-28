@@ -121,3 +121,39 @@ canvas.t {
 #files {
   display: none;
 }
+
+.buttons-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+.btn-info {
+  height: fit-content;
+  margin: 0;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 0;
+  background-color: #373737;
+  color: #fff;
+}
+
+.btn-info:hover {
+  background-color: #474747;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}

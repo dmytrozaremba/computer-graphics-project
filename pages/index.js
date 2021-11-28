@@ -14,7 +14,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.header}>Computer Graphics</h1>
         <div className={styles.grid}>
-          <Link href="/fractals/h">
+          <Link href="/fractals/h/info">
             <div className={styles.card}>
               <Image
                 src="/fractal_picture.jpg"
@@ -29,7 +29,7 @@ export default function Home() {
               </div>
             </div>
           </Link>
-          <Link href="/color">
+          <Link href="/color/info">
             <div className={styles.card}>
               <Image
                 src="/color_picture.jpg"
@@ -44,7 +44,7 @@ export default function Home() {
               </div>
             </div>
           </Link>
-          <Link href="/affine">
+          <Link href="/affine/info">
             <div className={styles.card}>
               <Image
                 src="/affine_picture.jpg"
