@@ -157,3 +157,13 @@ canvas.t {
   align-items: center;
   justify-content: flex-end;
 }
+
+.cords .field h4,
+.scale-box .field h4,
+.other-params .field h4 {
+  margin: 0.5rem 0;
+}
+
+.other-params {
+  margin-top: 2rem;
+}

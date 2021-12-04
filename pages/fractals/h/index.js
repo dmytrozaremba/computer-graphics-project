@@ -63,12 +63,15 @@ const fractal = () => {
               />
             </div>
             <div className="field">
-              <h4>Стиль ліній:</h4>
-              <input
-                type="text"
+              <h4 style={{ marginRight: '0.3rem' }}>Стиль ліній:</h4>
+              <select
                 value={lineStyle}
                 onChange={(e) => setLineStyle(e.target.value)}
-              />
+              >
+                <option value={'solid'}>Solid</option>
+                <option value={'dashed'}>Dashed</option>
+                <option value={'doted'}>Doted</option>
+              </select>
             </div>
             <div className="field">
               <h4>Колір ліній:</h4>
